@@ -1,17 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import illustration from './images/';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+function Order (){
+  return (
+    <div className='ordercontainer'>
+      <div className='ordercontainer-top'>
+        <img src={illustration}/>
+      </div> 
+      <div className='ordercontainer-bottom'>
+        <h1>Order Summary</h1>
+        <p>You can now listen to millions of songs, audiobooks, podcasts on any device anywhere you like</p>
+        <div>
+          Annual Plan<span>$50.99/year</span>
+        </div>
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+        <button>Proceed to Payment</button>
+      </div>
+
+    </div>
+  )
+}
+ReactDOM.render(<Order/>, document.getElementById('root'));
