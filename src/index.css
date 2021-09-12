@@ -5,9 +5,74 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #D6E1FF;
 }
-
+/* #root{
+  background-color: #D6E1FF
+} */
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+background-image{
+  background-position: 50%, 50%;
+}
+.ordercontainer{
+  margin: auto;
+  width: 50%;
+  border-radius:10px;
+  background-color:white
+}
+img{
+  width: 100%;
+  border-radius:10px 10px 0 0;
+}
+.ordercontainer-bottom{
+  display: grid;
+  place-items: center;
+  background-color: white;
+}
+.songs{
+  width: 60%;
+  text-align: center;
+}
+.price-container{
+  background-color:rgb(181, 241, 241);
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  border-radius: 20px;
+
+}
+.price-container img{
+  width: 80%;
+  
+}
+button{
+  background-color: blue;
+  border: none;
+  margin: 20px 0;
+  padding:15px 20px ;
+  width: 70%;
+  border-radius:10px;
+  color: white;
+}
+
+@media (max-width:758px) {
+  .price-container{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    border-radius: 20px;
+  }
+  .ordercontainer{
+    margin: auto;
+    width: 80%;
+    border-radius:10px;
+    background-color:white
+  }
 }
