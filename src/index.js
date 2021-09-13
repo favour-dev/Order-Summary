@@ -37,7 +37,7 @@ const Paragraph = ({text}) => (
   </>
 )
 
-const Price = ({}) => (
+const Price = () => (
   <>
      <div className="price-container">
           <Image className='music' source={musicicon} alt="music icon"/> 
