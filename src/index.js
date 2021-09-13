@@ -10,23 +10,51 @@ function Order (){
     // <div style={{ background: `url(${background})` }}>
       <div className='ordercontainer'>
         <div className='ordercontainer-top'>
-          <img src={illustration} alt= "illustration"/>
+          <Image className='illustration' source={illustration} alt="illustration"/>
         </div> 
         <div className='ordercontainer-bottom'>
-          <h1>Order Summary</h1>
-          <p className='songs'>You can now listen to millions of songs, audiobooks, podcasts on any device anywhere you like</p>
-          <div className="price-container">
-            <span><img src={musicicon} alt="musin icon"/></span>
-          <p className="price"> Annual Plan<br/><span>$50.99/year</span></p>
-          <a href="https://create-react-app.dev/docs/adding-images-fonts-and-files/">Change</a>
-          </div>
+          <Header children="Order Summary"/>
+          <Paragraph  text='You can now listen to millions of songs, audiobooks, podcasts on any device anywhere you like'/>
+          <Price />
 
-          <button>Proceed to Payment</button>
-          <p>Cancel order</p>
+          <Button Value='Proceed to Payment'/>
+          <Paragraph  text='Cancel Order'/>
         </div>
 
       </div>
     // </div>
   )
 }
+
+const Header = ({children}) => (
+  <>
+    <h1>{children}</h1>
+  </>
+)
+const Paragraph = ({text}) => (
+  <>
+    <p>{text}</p>
+  </>
+)
+
+const Price = ({}) => (
+  <>
+     <div className="price-container">
+          <Image className='music' source={musicicon} alt="music icon"/> 
+          <p className="price"> Annual Plan<br/><span>$50.99/year</span></p>
+          <a href="https://create-react-app.dev/docs/adding-images-fonts-and-files/">Change</a>
+      </div>
+  </>
+)
+
+const Image = ({source, alt}) => (
+  <>
+    <img src={source} alt={alt}/>
+  </>
+)
+const Button = ({Value}) => (
+  <>
+    <button>{Value}</button>
+  </>
+)
 ReactDOM.render(<Order/>, document.getElementById('root'));

@@ -7,19 +7,17 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: #D6E1FF;
 }
-/* #root{
-  background-color: #D6E1FF
-} */
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-background-image{
-  background-position: 50%, 50%;
-}
 .ordercontainer{
-  margin: auto;
-  width: 50%;
+  /* margin: auto; */
+  position: absolute;
+  top: 2.5%;
+  left: 25%;
+  width: 80%;
+  max-width: 50%;
   border-radius:10px;
   background-color:white
 }
@@ -31,42 +29,59 @@ img{
   display: grid;
   place-items: center;
   background-color: white;
+  border-radius:10px;
 }
-.songs{
-  width: 60%;
+p{
   text-align: center;
+  padding: 0 20px;
+  font-size: 18px;
+  width: 40%;
+
 }
 .price-container{
   background-color:rgb(181, 241, 241);
-  width: 60%;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 20px;
   border-radius: 20px;
+  padding: 0 10px;
+}
+h1{
+  text-align: center;
+}
+.price, a{
+  text-align: left;
+  font-size: 13px;
+}
+.music{
+  width: 10%;
+}
 
-}
-.price-container img{
-  width: 80%;
-  
-}
 button{
   background-color: blue;
   border: none;
   margin: 20px 0;
   padding:15px 20px ;
-  width: 70%;
+  width: 50%;
   border-radius:10px;
   color: white;
 }
 
-@media (max-width:758px) {
+@media (max-width:900px) {
+  .ordercontainer{
+    
+    position: absolute;
+    top: 15%;
+    left: 25%;
+    width: 70%;
+    max-width: 50%;
+    border-radius:10px;
+    background-color:white
+  }
   .price-container{
-    width: 80%;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px;
     border-radius: 20px;
   }
   .ordercontainer{
@@ -74,5 +89,25 @@ button{
     width: 80%;
     border-radius:10px;
     background-color:white
+  }
+  button{
+    background-color: blue;
+    border: none;
+    margin: 20px 0;
+    font-size: 8px;
+    padding:10px 20px ;
+    width: 70%;
+    border-radius:5px;
+    color: white;
+  }
+  p{
+    text-align: center;
+    padding: 0 20px;
+    font-size: 11px;
+  
+  }
+  .price, a{
+    text-align: left;
+    font-size: 7px;
   }
 }
