@@ -12,18 +12,11 @@ code {
     monospace;
 }
 .ordercontainer{
-  /* margin: auto; */
-  position: absolute;
-  top: 2.5%;
-  left: 25%;
-  width: 80%;
-  max-width: 50%;
-  border-radius:10px;
   background-color:white
 }
 img{
   width: 100%;
-  border-radius:10px 10px 0 0;
+  border-radius:0px 0px 0 0;
 }
 .ordercontainer-bottom{
   display: grid;
@@ -35,15 +28,14 @@ p{
   text-align: center;
   padding: 0 20px;
   font-size: 18px;
-  width: 40%;
-
+  max-width: 50%;
 }
 .price-container{
   background-color:rgb(181, 241, 241);
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 20px;
+  border-radius: 10px;
   padding: 0 10px;
 }
 h1{
@@ -61,40 +53,35 @@ button{
   background-color: blue;
   border: none;
   margin: 20px 0;
-  padding:15px 20px ;
-  width: 50%;
+  padding:10px 20px ;
+  width: 60%;
+  max-width: 40%;
   border-radius:10px;
   color: white;
 }
 
-@media (max-width:900px) {
+@media (min-width:768px) {
   .ordercontainer{
-    
-    position: absolute;
-    top: 15%;
-    left: 25%;
-    width: 70%;
+    margin: 50px auto;
     max-width: 50%;
     border-radius:10px;
     background-color:white
+  }
+  .ordercontainer-top img{
+    border-radius:10px 10px 0 0;
   }
   .price-container{
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 20px;
+    border-radius: 10px;
   }
-  .ordercontainer{
-    margin: auto;
-    width: 80%;
-    border-radius:10px;
-    background-color:white
-  }
+ 
   button{
     background-color: blue;
     border: none;
     margin: 20px 0;
-    font-size: 8px;
+    font-size: 10px;
     padding:10px 20px ;
     width: 70%;
     border-radius:5px;
@@ -103,11 +90,11 @@ button{
   p{
     text-align: center;
     padding: 0 20px;
-    font-size: 11px;
-  
+    font-size: 18px;
+    max-width:80%;
   }
   .price, a{
     text-align: left;
-    font-size: 7px;
+    font-size: 11px;
   }
 }
